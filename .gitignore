@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.aux
+*.log
+!submission_reproduction/*.log
+*.out
+*.synctex.gz
+data_pilot/prepared/beam_data.npz

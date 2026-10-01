@@ -1,0 +1,24 @@
+GITHUB SOURCE UPLOAD
+
+1. Extract this ZIP. Create your GitHub repository.
+2. Upload the contents of the repository folder to the repository root
+   using Add file > Upload files, in these groups (fewer than 100 files each):
+   - Group 1: all loose files, manuscript/, prior_revision/, submission_reproduction/
+   - Group 2: data_pilot/, editorial/, experiment/, ledger/, quality_revision/,
+              revision/, standards/
+   - Group 3: results/
+   Return to the repository root for each group and retain the folder paths.
+   GitHub Desktop can upload all files in one commit instead.
+
+This smaller download contains code, the manuscript PDF and LaTeX,
+vector figures, required frozen cohort inputs, and verification records.
+Raw/prepared third-party channel data are excluded; see the data instructions.
+
+The complete historical companion archive is NOT inside this smaller ZIP.
+The separate full download supplied in chat contains release_asset/
+Beam_Prediction_LaTeX_and_Code.zip. Attach that inner ZIP to GitHub release
+v1.0.0 to preserve the complete archived package. Its SHA-256 is:
+85752662835601ee9c37e0eb82e89807a439c5331356c3feda0c201dbbeb135b
+
+Upload alone does not establish personal reproduction by the human author.
+See AUTHOR_REPRODUCTION.md for reproduction instructions.

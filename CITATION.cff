@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the companion package using the public repository or archive URL once deposited."
+title: "When Does AI Beam Prediction Save Radio Resources? Companion package"
+type: software
+authors:
+  - family-names: Singh
+    given-names: Deepak
+    affiliation: Kyungpook National University
+version: 1.0.0
+abstract: "Reproduction source, outputs, verification records, manuscript and figures for a cell-level resource-accounting case study of AI beam prediction."

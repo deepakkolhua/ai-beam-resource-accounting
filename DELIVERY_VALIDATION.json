@@ -1,0 +1,43 @@
+{
+  "revision": "submission-final-reproduced-2026-09-28",
+  "input": "Pasted text(20260928-062524).txt",
+  "input_sha256": "6fa49fedb7d9d28e9f3d0f228e7e30d560738ab9ecf4d80b4ccb44f783054090",
+  "manuscript_changes": [
+    "Figure 1 caption defines A",
+    "Acknowledgment restored",
+    "Original factual biography restored"
+  ],
+  "scientific_content_unchanged": true,
+  "figure_format": "vector PDF with editable TikZ source",
+  "figure_raster_images": 0,
+  "all_figure_fonts_embedded": true,
+  "figure_size_mm": [
+    180,
+    102
+  ],
+  "minimum_figure_font_pt": 7,
+  "pages": 7,
+  "figures": 4,
+  "tables": 2,
+  "latex_warnings": false,
+  "overfull_boxes": false,
+  "undefined_references": false,
+  "all_pages_visually_inspected": true,
+  "author_reproduction": "not established",
+  "public_deposition": "blocked: no existing designated repository and connector cannot create one",
+  "submission": "not performed",
+  "main.tex_sha256": "3066d2a64f1addcec7fdaa1dad7f92721c6feaba02cff880f7bf05061069be97",
+  "main.pdf_sha256": "765c0b8ec91cc0446c95ac5cc3e7618af53971a9c61eb0ec69936687395cd44f",
+  "figures/accounting_architecture_vector.pdf_sha256": "47b9970d4299f82cb32000956c1b3dcbdca8b2c99d58b26f50746a6c75b25a90",
+  "figures/accounting_architecture_vector.tex_sha256": "6051aae1fea5c36c22b44e2f7725aaae110ad93ead4ea06bfb5529c7e795d39b",
+  "fresh_zip_compile": "passed; two pdfLaTeX passes, extracted PDF text matches",
+  "pdftotext_words": 4391,
+  "word_count_scope": "Mechanical whitespace count of PDF extraction, includes vector labels and back matter",
+  "acknowledgment_restored": true,
+  "biography_restored": true,
+  "A_defined_in_figure_caption": true,
+  "fresh_computational_reproduction": "passed; 8 commands, 27 output comparisons",
+  "reproduction_report": "submission_reproduction/REPRODUCTION_REPORT.md",
+  "human_author_personal_reproduction": "not established",
+  "all_final_pages_visually_inspected": true
+}

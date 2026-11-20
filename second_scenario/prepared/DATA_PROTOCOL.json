@@ -1,0 +1,22 @@
+{
+  "scenario": "city_1_losangeles_28",
+  "created_utc": "2026-11-17T02:48:07.396091+00:00",
+  "tx_set": 1,
+  "tx_index": 0,
+  "rx_set": 0,
+  "selection": "first numerical tuple before channel quality",
+  "source_archive_sha256": "3eb62ebc424a4008bc14e286672adec55010809c5024424b0384134a3f6928d7",
+  "source_archive_bytes": 33633360,
+  "source_params_sha256": "16f43321aec2cf78bb3790d61b01219773b21a25d251e69891244abd08071118",
+  "source_positions_sha256": "40ed2689a26865fe591178041fdebd365b12e088ac1142c3721fb469fc9ed32c",
+  "frozen_protocol_sha256": "a2ca2e2dc48f2b317d257d750958a3bfee8ec8825a74e752a453484f1320b602",
+  "split_sha256": "9bdfaab5ca108aaba98efd03d9cdb2cbb0bde93f724220ef32cd10ffb1a5e33a",
+  "split_origin_xy": [
+    -120.0,
+    -80.0
+  ],
+  "script_sha256": "fd548d653bdf565099400e142b8686c5e491d96425eac2996f50bcd15d58e208",
+  "original_helper_sha256": "21214ae3cbd97eeb85aad0a1526c880833c446424ff10472ca70ad4340c79f06",
+  "deepmimo_version": "4.0.5",
+  "numpy_version": "2.2.6"
+}

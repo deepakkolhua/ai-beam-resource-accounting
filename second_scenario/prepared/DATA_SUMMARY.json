@@ -1,0 +1,12 @@
+{
+  "scenario": "city_1_losangeles_28",
+  "retained_users": 12747,
+  "source_grid_points": 28542,
+  "split_counts": {
+    "0": 7499,
+    "1": 2752,
+    "2": 2496
+  },
+  "parseval_max_relative_error": 3.869200360903966e-15,
+  "beam_data_sha256": "5f86ccfaf431441b12309d833115d3b09ec7b184445f12247976b7efde8a3fb8"
+}

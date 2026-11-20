@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "independent_quality": {
+    "tracking_validation": {
+      "L2x3": {
+        "mean": 0.970949957591179,
+        "ci": [
+          0.9517493541827732,
+          0.9857191490780588
+        ],
+        "pairs": 10076,
+        "locations": 2751,
+        "tiles": 16
+      },
+      "T16": {
+        "mean": 0.9865806373439961,
+        "ci": [
+          0.9761314424101477,
+          0.994504085759683
+        ],
+        "pairs": 10076,
+        "locations": 2751,
+        "tiles": 16
+      }
+    },
+    "tracking_results": {
+      "L2x3": {
+        "mean": 0.9587673611111109,
+        "ci": [
+          0.9287823998079419,
+          0.9799680752671887
+        ],
+        "pairs": 9102,
+        "locations": 2496,
+        "tiles": 14
+      },
+      "T16": {
+        "mean": 0.9841746794871795,
+        "ci": [
+          0.9747087108406265,
+          0.9923047820706782
+        ],
+        "pairs": 9102,
+        "locations": 2496,
+        "tiles": 14
+      }
+    }
+  },
+  "independent_phase": {
+    "L2x3": {
+      "reversal_cohorts": 30,
+      "full_synchronized_top4_top16": [
+        30.9,
+        44.75
+      ],
+      "full_independent_top4_top16": [
+        17.57322547309256,
+        5.251303290997243
+      ],
+      "synchronized_advantage_min_max": [
+        10.5,
+        17.5
+      ],
+      "independent_advantage_min_max": [
+        9.315290101129186,
+        15.613353137196597
+      ]
+    },
+    "T16": {
+      "reversal_cohorts": 30,
+      "full_synchronized_top4_top16": [
+        41.93333333333333,
+        55.78333333333333
+      ],
+      "full_independent_top4_top16": [
+        28.60655880642589,
+        16.284636624330574
+      ],
+      "synchronized_advantage_min_max": [
+        10.5,
+        17.5
+      ],
+      "independent_advantage_min_max": [
+        9.315290101129186,
+        15.613353137196597
+      ]
+    }
+  },
+  "phase_cases": 7800,
+  "max_absolute_phase_discrepancy": 3.552713678800501e-14,
+  "data_sha256": "5f86ccfaf431441b12309d833115d3b09ec7b184445f12247976b7efde8a3fb8",
+  "script_sha256": "4ccccf1fc12c1d91715c7dbf2030d99a6f3b4a53fe244ea17e8fe332a0055083",
+  "scope": "Independent recomputation from prepared channels and saved tracking arrays; original channel synthesizer not independently reimplemented."
+}

@@ -1,0 +1,143 @@
+{
+  "source_files": {
+    "BASELINE_PROTOCOL.json": {
+      "path": "/workspace/scratch/537b138483a4/output/sensitivity/inputs/BASELINE_PROTOCOL.json",
+      "sha256": "b7d4f8803032b9f04492f815d2f103998fb9ddf294bc6fd46509b2f03f498ff3"
+    },
+    "qualified_baseline.json": {
+      "path": "/workspace/scratch/537b138483a4/output/sensitivity/inputs/qualified_baseline.json",
+      "sha256": "42df2fea0c6942d160a1aadad8b1a23fd7297393500bfc42acfa6418ca99693b"
+    },
+    "tracking_validation.json": {
+      "path": "/workspace/scratch/537b138483a4/output/sensitivity/inputs/tracking_validation.json",
+      "sha256": "2fb5ec5ace17d5dcf0a0e9d20f27394002183d28fa5f06bb6b016204ae2c4b18"
+    }
+  },
+  "script_sha256": "f833ce42031bea4b28153784a5aff0267a72fecd27e0e4a0833f7101c6c060db",
+  "selected_profile": "T16",
+  "displacement_m": 1,
+  "scope": "Validation selection panel only. Original evaluation panel omitted; no values altered.",
+  "interval_semantics": "Lower endpoint of geographic-tile bootstrap 95% interval; conditional on this scene.",
+  "size_inches": [
+    3.5,
+    2.5
+  ],
+  "values": {
+    "topk": [
+      {
+        "profile": "T2",
+        "measurements": 2,
+        "lower_95_percent": 81.23198460820898
+      },
+      {
+        "profile": "T4",
+        "measurements": 4,
+        "lower_95_percent": 88.58675364674728
+      },
+      {
+        "profile": "T8",
+        "measurements": 8,
+        "lower_95_percent": 92.24562263662712
+      },
+      {
+        "profile": "T12",
+        "measurements": 12,
+        "lower_95_percent": 94.41463383460521
+      },
+      {
+        "profile": "T16",
+        "measurements": 16,
+        "lower_95_percent": 95.67714026327793
+      },
+      {
+        "profile": "T24",
+        "measurements": 24,
+        "lower_95_percent": 97.64992059621387
+      },
+      {
+        "profile": "T32",
+        "measurements": 32,
+        "lower_95_percent": 98.36510090654006
+      },
+      {
+        "profile": "T48",
+        "measurements": 48,
+        "lower_95_percent": 99.24870027291632
+      },
+      {
+        "profile": "T64",
+        "measurements": 64,
+        "lower_95_percent": 99.79506793173142
+      }
+    ],
+    "lobes": [
+      {
+        "profile": "L2x3",
+        "measurements": 6,
+        "lower_95_percent": 89.53027189560697
+      },
+      {
+        "profile": "L3x3",
+        "measurements": 9,
+        "lower_95_percent": 91.9717950935694
+      },
+      {
+        "profile": "L2x5",
+        "measurements": 10,
+        "lower_95_percent": 92.2806499781845
+      },
+      {
+        "profile": "L3x5",
+        "measurements": 15,
+        "lower_95_percent": 94.68175040321164
+      }
+    ],
+    "contiguous": [
+      {
+        "profile": "C2",
+        "measurements": 2,
+        "lower_95_percent": 78.10734897424109
+      },
+      {
+        "profile": "C4",
+        "measurements": 4,
+        "lower_95_percent": 81.60833375977556
+      },
+      {
+        "profile": "C8",
+        "measurements": 8,
+        "lower_95_percent": 87.54976015760849
+      },
+      {
+        "profile": "C12",
+        "measurements": 12,
+        "lower_95_percent": 89.61887443233955
+      },
+      {
+        "profile": "C16",
+        "measurements": 16,
+        "lower_95_percent": 90.78090706476316
+      },
+      {
+        "profile": "C24",
+        "measurements": 24,
+        "lower_95_percent": 93.32883926742068
+      },
+      {
+        "profile": "C32",
+        "measurements": 32,
+        "lower_95_percent": 96.28409549490058
+      },
+      {
+        "profile": "C48",
+        "measurements": 48,
+        "lower_95_percent": 98.82076948346518
+      },
+      {
+        "profile": "C64",
+        "measurements": 64,
+        "lower_95_percent": 99.79506793173142
+      }
+    ]
+  }
+}

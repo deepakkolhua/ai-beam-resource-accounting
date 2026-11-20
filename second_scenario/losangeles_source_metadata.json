@@ -1,0 +1,93 @@
+{
+  "_id": "67ca5be1cc1000e4456180c3",
+  "title": "city_1_losangeles_28",
+  "linkName": "city_1_losangeles_28",
+  "subMenu": "v4",
+  "description": "A scenario for city_1_losangeles_28",
+  "details": [],
+  "images": [
+    {
+      "image": "/images/1730539279077.png",
+      "heading": "Figure 1",
+      "description": "The top view of the scenario"
+    },
+    {
+      "image": "/images/1730544815185.png",
+      "heading": "Figure 2",
+      "description": "The bird-eye view of the scenario"
+    },
+    {
+      "image": "/images/1730539318596.png",
+      "heading": "Figure 3",
+      "description": "Satellite image of the scenario"
+    }
+  ],
+  "keyComponents": [
+    {
+      "name": "Ray-Tracing Configuration",
+      "description": "\n                    <p><strong>Ray-tracer:</strong> Remcom Wireless Insite \n                    v3.3</p>\n                    <p><strong>Frequency:</strong> 28.0 GHz</p>\n                "
+    },
+    {
+      "name": "Ray-tracing parameters",
+      "description": "\n                    <h4>Main interaction limits:</h4>\n                    <ul>\n                        <li>Max path depth: 4</li>\n                        <li>Max reflections: 3</li>\n                        <li>Max diffractions: 1</li>\n                        <li>Max scatterings: 1</li>\n                        <li>Max transmissions: 0</li>\n                    </ul>\n                    <h4>Ray Casting Settings:</h4>\n                    <ul>\n                        <li>Number of rays: 259,200.0</li>\n                        <li>Casting method: uniform</li>\n                        <li>Casting range (az): 360.0\u00b0</li>\n                        <li>Casting range (el): 180.0\u00b0</li>\n                    </ul>\n                "
+    },
+    {
+      "name": "Scene",
+      "description": "\n                    <ul>\n                        <li>Number of scenes: 1</li>\n                        <li>Total objects: 147</li>\n                        <li>Vertices: 840</li>\n                        <li>Faces: 3028 triangular faces</li>\n                    </ul>\n                "
+    },
+    {
+      "name": "TX/RX Configuration",
+      "description": "\n                    <p><strong>Total number of receivers:</strong> 18280</p>\n                    <p><strong>Total number of transmitters:</strong> 3</p>\n                    <h4>TX/RX Sets:</h4>\n                    \n                        <div class=\"txrx-set\">\n                            <h5>txrx_set_0 (UE_grid)</h5>\n                            <ul>\n                                <li>Role: RX</li>\n                                <li>Total points: 28,542</li>\n                                <li>Active points: 18,277</li>\n                                <li>Antennas per point: 1</li>\n                                <li>Dual polarization: False</li>\n                            </ul>\n                        </div>\n                    \n                        <div class=\"txrx-set\">\n                            <h5>txrx_set_1 (BS3)</h5>\n                            <ul>\n                                <li>Role: TX & RX</li>\n                                <li>Total points: 1</li>\n                                <li>Active points: 1</li>\n                                <li>Antennas per point: 1</li>\n                                <li>Dual polarization: False</li>\n                            </ul>\n                        </div>\n                    \n                        <div class=\"txrx-set\">\n                            <h5>txrx_set_2 (BS2)</h5>\n                            <ul>\n                                <li>Role: TX & RX</li>\n                                <li>Total points: 1</li>\n                                <li>Active points: 1</li>\n                                <li>Antennas per point: 1</li>\n                                <li>Dual polarization: False</li>\n                            </ul>\n                        </div>\n                    \n                        <div class=\"txrx-set\">\n                            <h5>txrx_set_3 (BS1)</h5>\n                            <ul>\n                                <li>Role: TX & RX</li>\n                                <li>Total points: 1</li>\n                                <li>Active points: 1</li>\n                                <li>Antennas per point: 1</li>\n                                <li>Dual polarization: False</li>\n                            </ul>\n                        </div>\n                    \n                "
+    },
+    {
+      "name": "GPS Bounding Box",
+      "description": "\n            <div class=\"section-content\">\n                <p>The geographical coverage area of this scenario is defined by the following GPS coordinates:</p>\n                <ul>\n                    <li><strong>Minimum Latitude:</strong> 34.06430723</li>\n                    <li><strong>Minimum Longitude:</strong> -118.2630866</li>\n                    <li><strong>Maximum Latitude:</strong> 34.06560881</li>\n                    <li><strong>Maximum Longitude:</strong> -118.2609365</li>\n                </ul>\n            </div>\n          "
+    }
+  ],
+  "download": [
+    {
+      "zip": "city_1_losangeles_28.zip",
+      "fileId": "4_zfd1a05f3643d1ff69a530515_f1067243605229481_d20250303_m153754_c005_v0501009_t0053_u01741016274761",
+      "folder": "",
+      "version": "v4.0.0a2",
+      "description": "Initial version"
+    }
+  ],
+  "features": {
+    "bands": [
+      "mmW"
+    ],
+    "numRx": 18280,
+    "environment": "outdoor",
+    "raytracerName": "Insite",
+    "maxReflections": 3
+  },
+  "advancedParameters": {
+    "city": "Los Angeles, CA, USA",
+    "BS2BS": true,
+    "numTx": 3,
+    "dynamic": false,
+    "numRays": 259200,
+    "bbCoords": {
+      "maxLat": 34.06560881,
+      "maxLon": -118.2609365,
+      "minLat": 34.06430723,
+      "minLon": -118.2630866
+    },
+    "dmVersion": "4.0.0a2",
+    "pathDepth": 4,
+    "multiRxAnt": false,
+    "multiTxAnt": false,
+    "scattering": true,
+    "diffraction": true,
+    "digitalTwin": true,
+    "transmission": false,
+    "dualPolarization": false
+  },
+  "submittedBy": "674d258b5f377a84b8a6465f",
+  "createdAt": "2025-03-07T02:37:21.000Z",
+  "submissionId": "67c5cce371c159f3a4d25fae",
+  "displayOrder": 560,
+  "visible": 1,
+  "hasRtSource": 0
+}

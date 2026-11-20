@@ -1,0 +1,11 @@
+{
+  "scenario": "city_1_losangeles_28",
+  "source_version": "v4.0.0a2",
+  "access_date": "2026-11-17",
+  "official_scenario_url": "https://www.deepmimo.net/scenarios/v4/city_1_losangeles_28",
+  "official_api_url": "https://deepmimo.net/api/download/secure?filename=city_1_losangeles_28.zip",
+  "bytes": 33633360,
+  "sha256": "3eb62ebc424a4008bc14e286672adec55010809c5024424b0384134a3f6928d7",
+  "archive_crc_verified": true,
+  "selection_reason": "First numerically indexed distinct city after NewYork, same28GHz outdoor WirelessInSite3.3 family; no model/accounting outputs inspected."
+}

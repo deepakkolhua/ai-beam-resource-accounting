@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-18",
+  "pdf_pages": 6,
+  "counts": {
+    "pdf_extracted_whitespace_tokens": 4782,
+    "figure_environments": 4,
+    "table_environments": 2,
+    "displayed_equations": 2,
+    "references": 15,
+    "overfull_boxes": 0,
+    "undefined_references": 0
+  },
+  "word_count_method": "PDF whitespace-token count includes captions, figure labels, references, biography and page numbers; mechanical proxy, not editorial certification.",
+  "visual_review": "Inspected a rendering of all six pages and the placed equation on page 4. Figure 3 is placed at single-column width on page 5. The final log contains no overfull boxes or undefined references.",
+  "source_sha256": "1b0ee4a0d75e427196122d3864761ebf25e82586f933b1193f7b1a7858018d88",
+  "latest_edit": "Added top-four occupancy for both audit schedules and a permanent link to the October 1 record supporting the evaluation rule.",
+  "biography_unchanged": true,
+  "acknowledgment_updated_for_actual_second_scene_assistance": true,
+  "scientific_checks": {
+    "new_york": "Existing saved results preserved. Prior checks reproduced 3,900 synchronized cases and 120 independent-phase endpoint cases, plus exhaustive small fixtures.",
+    "los_angeles": {
+      "source": "city_1_losangeles_28",
+      "selected_profile": "L2x3",
+      "selected_measurements": 6,
+      "validation_quality": {
+        "within_3db_fraction": 0.9709499575911789,
+        "within_3db_tile_bootstrap95": [
+          0.9517493541827732,
+          0.9857191490780589
+        ],
+        "pair_weighted_within_3db_fraction": 0.972111949186185,
+        "mean_loss_db": 0.5175280657314875
+      },
+      "evaluation_quality": {
+        "within_3db_fraction": 0.9587673611111109,
+        "within_3db_tile_bootstrap95": [
+          0.9287823998079416,
+          0.9799680752671885
+        ],
+        "pair_weighted_within_3db_fraction": 0.958470665787739,
+        "mean_loss_db": 0.6182204875239378
+      },
+      "evaluation_point_gate_passes": true,
+      "evaluation_interval_crosses_95_percent": true,
+      "full_adoption_reversal_cohorts": 30,
+      "cohorts": 30,
+      "independent_top16_negative_savings_cohorts": 3,
+      "independent_checker": {
+        "status": "passed",
+        "phase_cases": 7800,
+        "max_absolute_discrepancy": 3.552713678800501e-14,
+        "scope": "Independent recomputation from prepared channels and saved tracking arrays; original channel synthesizer not independently reimplemented."
+      },
+      "prepared_data_sha256": "5f86ccfaf431441b12309d833115d3b09ec7b184445f12247976b7efde8a3fb8",
+      "point_threshold_provenance": "Public October 1 commit cf37b694731835e08de04303e0457376e6d0c685 states the point-rate rule. Its source manifest records SHA-256 b7d4f8803032b9f04492f815d2f103998fb9ddf294bc6fd46509b2f03f498ff3 for the New York protocol bundled in sensitivity/inputs, which sets the 0.95 threshold. The November 17 Los Angeles protocol preserves those rules and its hash matches the run manifest."
+    },
+    "practical_learned_predictor_evaluated": false,
+    "same_ray_tracing_family": true,
+    "base_stations_per_scene": 1,
+    "new_york_audit_occupancy": "Full adoption, synchronized and independent expected occupancy per update respectively: top-four 24.000000 / 41.496342, top-sixteen 7.887500 / 50.776746."
+  },
+  "public_repository_modified": false,
+  "journal_submission_performed": false
+}

@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-17T02:48:37.772974+00:00",
+  "scenario": "city_1_losangeles_28",
+  "data_sha256": "5f86ccfaf431441b12309d833115d3b09ec7b184445f12247976b7efde8a3fb8",
+  "protocol_sha256": "a2ca2e2dc48f2b317d257d750958a3bfee8ec8825a74e752a453484f1320b602",
+  "script_sha256": "d42bd4bc6be99b4ca56f478282a2124efa6ff71e394ce2b61124399c896911b2",
+  "original_helper_sha256": "a6a17b4793727a956f0235180e6ea11b6fc0a10b61d47273bd5358395e486227",
+  "status": "written before quality/accounting calculation; internal record, not external preregistration"
+}

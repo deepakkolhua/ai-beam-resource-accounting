@@ -1,0 +1,40 @@
+{
+  "selected_profile": "L2x3",
+  "selected_measurements": 6,
+  "validation_qualifying_profiles": [
+    "L2x3",
+    "T8",
+    "L3x3",
+    "L2x5",
+    "T12",
+    "L3x5",
+    "T16",
+    "T24",
+    "C24",
+    "T32",
+    "C32",
+    "T48",
+    "C48",
+    "T64",
+    "C64"
+  ],
+  "selection_uses_test_results": false,
+  "validation_selected": {
+    "within_3db_fraction": 0.9709499575911789,
+    "within_3db_tile_bootstrap95": [
+      0.9517493541827732,
+      0.9857191490780589
+    ],
+    "pair_weighted_within_3db_fraction": 0.972111949186185,
+    "mean_loss_db": 0.5175280657314875
+  },
+  "fixed_T16_validation": {
+    "within_3db_fraction": 0.986580637343996,
+    "within_3db_tile_bootstrap95": [
+      0.9761314424101478,
+      0.994504085759683
+    ],
+    "pair_weighted_within_3db_fraction": 0.9874950377133783,
+    "mean_loss_db": 0.18964004985667304
+  }
+}

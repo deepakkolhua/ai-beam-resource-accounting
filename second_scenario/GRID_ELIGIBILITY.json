@@ -1,0 +1,27 @@
+{
+  "scenario": "city_1_losangeles_28",
+  "rx_position_shape": [
+    28542,
+    3
+  ],
+  "xy_min": [
+    -100.37000274658203,
+    -70.9989013671875
+  ],
+  "xy_max": [
+    99.62999725341797,
+    70.0010986328125
+  ],
+  "split_counts_before_channel_eligibility": {
+    "train": 11120,
+    "validation": 3648,
+    "test": 3472
+  },
+  "evaluation_exact_1m_directional_pairs_before_channel_eligibility": {
+    "x+": 3255,
+    "y+": 3248,
+    "x-": 3255,
+    "y-": 3248
+  },
+  "note": "Position-only inspection, before generated channels or quality/accounting outputs. Channel validity may further reduce counts."
+}

@@ -1,0 +1,332 @@
+{
+  "observations": {
+    "noise_std_db": 0.5,
+    "quantization_db": 1.0,
+    "prior_noise_seed": 341993,
+    "current_noise_seed": 341994,
+    "rule": "Independent Gaussian noise in dB, then nearest-even integer dB rounding. Each physical point has one fixed previous-role and one fixed current-role 64-beam observation shared across arms. No dynamic-range censoring, receiver sensitivity, or Rx beam sweep is simulated."
+  },
+  "candidate_profiles": [
+    {
+      "id": "T2",
+      "family": "topk",
+      "measurements": 2,
+      "k": 2
+    },
+    {
+      "id": "C2",
+      "family": "contiguous",
+      "measurements": 2,
+      "k": 2
+    },
+    {
+      "id": "T4",
+      "family": "topk",
+      "measurements": 4,
+      "k": 4
+    },
+    {
+      "id": "C4",
+      "family": "contiguous",
+      "measurements": 4,
+      "k": 4
+    },
+    {
+      "id": "L2x3",
+      "family": "lobes",
+      "measurements": 6,
+      "centers": 2,
+      "width": 3
+    },
+    {
+      "id": "T8",
+      "family": "topk",
+      "measurements": 8,
+      "k": 8
+    },
+    {
+      "id": "C8",
+      "family": "contiguous",
+      "measurements": 8,
+      "k": 8
+    },
+    {
+      "id": "L3x3",
+      "family": "lobes",
+      "measurements": 9,
+      "centers": 3,
+      "width": 3
+    },
+    {
+      "id": "L2x5",
+      "family": "lobes",
+      "measurements": 10,
+      "centers": 2,
+      "width": 5
+    },
+    {
+      "id": "T12",
+      "family": "topk",
+      "measurements": 12,
+      "k": 12
+    },
+    {
+      "id": "C12",
+      "family": "contiguous",
+      "measurements": 12,
+      "k": 12
+    },
+    {
+      "id": "L3x5",
+      "family": "lobes",
+      "measurements": 15,
+      "centers": 3,
+      "width": 5
+    },
+    {
+      "id": "T16",
+      "family": "topk",
+      "measurements": 16,
+      "k": 16
+    },
+    {
+      "id": "C16",
+      "family": "contiguous",
+      "measurements": 16,
+      "k": 16
+    },
+    {
+      "id": "T24",
+      "family": "topk",
+      "measurements": 24,
+      "k": 24
+    },
+    {
+      "id": "C24",
+      "family": "contiguous",
+      "measurements": 24,
+      "k": 24
+    },
+    {
+      "id": "T32",
+      "family": "topk",
+      "measurements": 32,
+      "k": 32
+    },
+    {
+      "id": "C32",
+      "family": "contiguous",
+      "measurements": 32,
+      "k": 32
+    },
+    {
+      "id": "T48",
+      "family": "topk",
+      "measurements": 48,
+      "k": 48
+    },
+    {
+      "id": "C48",
+      "family": "contiguous",
+      "measurements": 48,
+      "k": 48
+    },
+    {
+      "id": "T64",
+      "family": "topk",
+      "measurements": 64,
+      "k": 64
+    },
+    {
+      "id": "C64",
+      "family": "contiguous",
+      "measurements": 64,
+      "k": 64
+    }
+  ],
+  "construction": {
+    "T": "Stable descending rank of all64 prior noisy/quantized beam powers, low beam-index tie. Choose firstK. Sort chosen beam IDs before current selection.",
+    "L": "Greedy nonmaximum suppression on stable descending prior measured rank: accept next beam if its minimum circular index distance from each accepted center is >=width. Stop after centers acceptances. Around each center include odd-width offsets -(width-1)/2 through +(width-1)/2, modulo64. These blocks are pairwise disjoint and cost exactly centers*width. The name denotes separated measured peaks, not identified physical multipath clusters. No current power constructs the candidates.",
+    "C": "Exactly parent contiguous construction: prior measured argmax center; for evenK<64 use offsets -(K/2-1)..+(K/2-1), plus stronger prior measured boundary at -K/2 or+K/2 (negative tie). C64 all beams.",
+    "current_selection": "Choose current noisy/quantized largest power among sorted candidate IDs, stable low-index tie.",
+    "initialization": "All families receive the same assumed prior full-bank measurement. Its one-time cost is outside the per-update ledger. Repeated endpoint trials do not establish that prior top-K is replenished over a trajectory."
+  },
+  "quality": {
+    "metric": "current selected true beam power within3dB of current true best",
+    "tolerance_db": 1e-12,
+    "estimand": "Within each distance and split, average success across eligible previous directions per distinct current location, then uniformly across current locations. This matches accounting uniform current then uniform previous.",
+    "bootstrap": {
+      "replicates": 2000,
+      "seed": 341995,
+      "unit": "current20m geographic tile",
+      "interval": "percentile95%; ratio of tile-summed current-location probabilities to tile-summed current counts"
+    },
+    "scope": "Conditional on one static scene and the declared current/prior population, not independent mobility trajectories or an external generalization guarantee."
+  },
+  "selection": {
+    "distance_m": 1,
+    "validation_split": 1,
+    "evaluation_split": 2,
+    "target": 0.95,
+    "rule": "Among all candidates whose validation95% tile-bootstrap lower endpoint is >=0.95, choose lowest measurement count. Break count ties by family topk, then lobes, then contiguous, then ASCII profile ID. Save baseline_selection.json before processing evaluation outcomes. No reselection after evaluation.",
+    "tie_order": [
+      "topk",
+      "lobes",
+      "contiguous"
+    ],
+    "evaluation_gate": "Selected profile evaluation point success>=0.95; report full95% interval separately; evaluation lower bound is not selection or acceptance gate."
+  },
+  "scenario": "city_1_losangeles_28",
+  "scope": "Second distinct scene selected by next numerical city identifier at28GHz, before computing its quality or accounting results. Internal frozen specification; not external preregistration.",
+  "geometry": {
+    "distances_m": [
+      1,
+      2,
+      5
+    ],
+    "directions": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "tolerance_m": 0.001
+  },
+  "cohorts": {
+    "seed": 202609251,
+    "populations": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "repeats": 30,
+    "selection": "uniform distinct current locations then uniform eligible prior direction; nested randomcapability order"
+  },
+  "phase": {
+    "designs": [
+      [
+        "topk4",
+        4,
+        2
+      ],
+      [
+        "topk16",
+        16,
+        8
+      ]
+    ],
+    "AI_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "primary_population": 64,
+    "primary_distance_m": 1
+  },
+  "preparation": {
+    "bs_antenna": {
+      "shape": [
+        64,
+        1
+      ],
+      "spacing": 0.5,
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ue_antenna": {
+      "shape": [
+        1,
+        1
+      ]
+    },
+    "num_paths": 25,
+    "ofdm": {
+      "subcarriers": 512,
+      "selected_subcarriers": [
+        0
+      ],
+      "bandwidth": 10000000.0
+    },
+    "split": "Original20mtiles,2mguards,SHA256beam-pilot-20260925",
+    "TX_selection": "firstnumericalTXset/index,thenfirstnumericalRXset"
+  },
+  "failure_rule": "No scenario, family, seed, displacement orqualitygate replacement after results. Report fixedT16quality and selectedprofile. Failed selected evaluation quality invalidates qualifiedcellcomparison, though phaseaccounting may be retained as explicitly diagnostic."
+}

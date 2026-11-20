@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "frozen_at_utc": "2026-09-28T00:58:32.989639+00:00",
+  "status": "Prospective method amendment for an exploratory study on a previously examined scene. Frozen before computing or inspecting the new prior-top-K or multi-center outcomes; not a preregistered confirmatory experiment.",
+  "known_results": "C32 selected by validation in prior revision. Corrected evaluation success 0.966484407 with 95% tile interval [0.949176892,0.981808474]. Prior accounting union saturated at 50% adoption for 32 and64 UEs. Prior manuscript and all prior quality/accounting results were available before this amendment.",
+  "data_sha256": "f050003222407ea0d6466e064a288d37324397fc72f895894e0742b53473d25e",
+  "parent_tracking_protocol_sha256": "39947469f3560f05a3c690cb9742a6c45e07d22c75c00357d82cc474dfa2752a",
+  "parent_weight_correction_sha256": "7f3e9c6b068bc0548d616c6c247200f011f55ef0c286eb684ed91be7e6c77fe8",
+  "parent_validation_arrays_sha256": "16f58d7b370e30c5bf012d321e89b07707aa36ae8aa34200e83de1df1e45043c",
+  "parent_test_arrays_sha256": "47a1af5a51aab71993dcadcd47129738f27d55c3e399e0033d7ee09d0694c307",
+  "geometry": "Reuse parent geometry rows without alteration for distances1,2,5m and each split. No new locations, channels, noise or cohorts.",
+  "observations": {
+    "noise_std_db": 0.5,
+    "quantization_db": 1.0,
+    "prior_noise_seed": 341993,
+    "current_noise_seed": 341994,
+    "rule": "Independent Gaussian noise in dB, then nearest-even integer dB rounding. Each physical point has one fixed previous-role and one fixed current-role 64-beam observation shared across arms. No dynamic-range censoring, receiver sensitivity, or Rx beam sweep is simulated."
+  },
+  "candidate_profiles": [
+    {
+      "id": "T2",
+      "family": "topk",
+      "measurements": 2,
+      "k": 2
+    },
+    {
+      "id": "C2",
+      "family": "contiguous",
+      "measurements": 2,
+      "k": 2
+    },
+    {
+      "id": "T4",
+      "family": "topk",
+      "measurements": 4,
+      "k": 4
+    },
+    {
+      "id": "C4",
+      "family": "contiguous",
+      "measurements": 4,
+      "k": 4
+    },
+    {
+      "id": "L2x3",
+      "family": "lobes",
+      "measurements": 6,
+      "centers": 2,
+      "width": 3
+    },
+    {
+      "id": "T8",
+      "family": "topk",
+      "measurements": 8,
+      "k": 8
+    },
+    {
+      "id": "C8",
+      "family": "contiguous",
+      "measurements": 8,
+      "k": 8
+    },
+    {
+      "id": "L3x3",
+      "family": "lobes",
+      "measurements": 9,
+      "centers": 3,
+      "width": 3
+    },
+    {
+      "id": "L2x5",
+      "family": "lobes",
+      "measurements": 10,
+      "centers": 2,
+      "width": 5
+    },
+    {
+      "id": "T12",
+      "family": "topk",
+      "measurements": 12,
+      "k": 12
+    },
+    {
+      "id": "C12",
+      "family": "contiguous",
+      "measurements": 12,
+      "k": 12
+    },
+    {
+      "id": "L3x5",
+      "family": "lobes",
+      "measurements": 15,
+      "centers": 3,
+      "width": 5
+    },
+    {
+      "id": "T16",
+      "family": "topk",
+      "measurements": 16,
+      "k": 16
+    },
+    {
+      "id": "C16",
+      "family": "contiguous",
+      "measurements": 16,
+      "k": 16
+    },
+    {
+      "id": "T24",
+      "family": "topk",
+      "measurements": 24,
+      "k": 24
+    },
+    {
+      "id": "C24",
+      "family": "contiguous",
+      "measurements": 24,
+      "k": 24
+    },
+    {
+      "id": "T32",
+      "family": "topk",
+      "measurements": 32,
+      "k": 32
+    },
+    {
+      "id": "C32",
+      "family": "contiguous",
+      "measurements": 32,
+      "k": 32
+    },
+    {
+      "id": "T48",
+      "family": "topk",
+      "measurements": 48,
+      "k": 48
+    },
+    {
+      "id": "C48",
+      "family": "contiguous",
+      "measurements": 48,
+      "k": 48
+    },
+    {
+      "id": "T64",
+      "family": "topk",
+      "measurements": 64,
+      "k": 64
+    },
+    {
+      "id": "C64",
+      "family": "contiguous",
+      "measurements": 64,
+      "k": 64
+    }
+  ],
+  "construction": {
+    "T": "Stable descending rank of all64 prior noisy/quantized beam powers, low beam-index tie. Choose firstK. Sort chosen beam IDs before current selection.",
+    "L": "Greedy nonmaximum suppression on stable descending prior measured rank: accept next beam if its minimum circular index distance from each accepted center is >=width. Stop after centers acceptances. Around each center include odd-width offsets -(width-1)/2 through +(width-1)/2, modulo64. These blocks are pairwise disjoint and cost exactly centers*width. The name denotes separated measured peaks, not identified physical multipath clusters. No current power constructs the candidates.",
+    "C": "Exactly parent contiguous construction: prior measured argmax center; for evenK<64 use offsets -(K/2-1)..+(K/2-1), plus stronger prior measured boundary at -K/2 or+K/2 (negative tie). C64 all beams.",
+    "current_selection": "Choose current noisy/quantized largest power among sorted candidate IDs, stable low-index tie.",
+    "initialization": "All families receive the same assumed prior full-bank measurement. Its one-time cost is outside the per-update ledger. Repeated endpoint trials do not establish that prior top-K is replenished over a trajectory."
+  },
+  "quality": {
+    "metric": "current selected true beam power within3dB of current true best",
+    "tolerance_db": 1e-12,
+    "estimand": "Within each distance and split, average success across eligible previous directions per distinct current location, then uniformly across current locations. This matches accounting uniform current then uniform previous.",
+    "bootstrap": {
+      "replicates": 2000,
+      "seed": 341995,
+      "unit": "current20m geographic tile",
+      "interval": "percentile95%; ratio of tile-summed current-location probabilities to tile-summed current counts"
+    },
+    "scope": "Conditional on one static scene and the declared current/prior population, not independent mobility trajectories or an external generalization guarantee."
+  },
+  "selection": {
+    "distance_m": 1,
+    "validation_split": 1,
+    "evaluation_split": 2,
+    "target": 0.95,
+    "rule": "Among all candidates whose validation95% tile-bootstrap lower endpoint is >=0.95, choose lowest measurement count. Break count ties by family topk, then lobes, then contiguous, then ASCII profile ID. Save baseline_selection.json before processing evaluation outcomes. No reselection after evaluation.",
+    "tie_order": [
+      "topk",
+      "lobes",
+      "contiguous"
+    ],
+    "evaluation_gate": "Selected profile evaluation point success>=0.95; report full95% interval separately; evaluation lower bound is not selection or acceptance gate."
+  },
+  "output_interface": "tracking_validation.npz and tracking_results.npz preserve original geometry keys/order and expose group_<id>, selected_<id>, loss_db_<id>, within3db_<id>. baseline_selection.json written before test processing, qualified_baseline.json final. Legacy geometry and rankings retained; no old conventional arrays changed."
+}

@@ -1,0 +1,290 @@
+{
+  "selected_profile": "L2x3",
+  "selected_measurements": 6,
+  "validation_qualifying_profiles": [
+    "L2x3",
+    "T8",
+    "L3x3",
+    "L2x5",
+    "T12",
+    "L3x5",
+    "T16",
+    "T24",
+    "C24",
+    "T32",
+    "C32",
+    "T48",
+    "C48",
+    "T64",
+    "C64"
+  ],
+  "selection_uses_test_results": false,
+  "validation_selected": {
+    "within_3db_fraction": 0.9709499575911789,
+    "within_3db_tile_bootstrap95": [
+      0.9517493541827732,
+      0.9857191490780589
+    ],
+    "pair_weighted_within_3db_fraction": 0.972111949186185,
+    "mean_loss_db": 0.5175280657314875
+  },
+  "fixed_T16_validation": {
+    "within_3db_fraction": 0.986580637343996,
+    "within_3db_tile_bootstrap95": [
+      0.9761314424101478,
+      0.994504085759683
+    ],
+    "pair_weighted_within_3db_fraction": 0.9874950377133783,
+    "mean_loss_db": 0.18964004985667304
+  },
+  "evaluation_selected": {
+    "within_3db_fraction": 0.9587673611111109,
+    "within_3db_tile_bootstrap95": [
+      0.9287823998079416,
+      0.9799680752671885
+    ],
+    "pair_weighted_within_3db_fraction": 0.958470665787739,
+    "mean_loss_db": 0.6182204875239378
+  },
+  "fixed_T16_evaluation": {
+    "within_3db_fraction": 0.9841746794871795,
+    "within_3db_tile_bootstrap95": [
+      0.9747087108406264,
+      0.9923047820706782
+    ],
+    "pair_weighted_within_3db_fraction": 0.984179301252472,
+    "mean_loss_db": 0.24199928229737624
+  },
+  "evaluation_point_passes": true,
+  "fixed_T16_point_passes": true,
+  "pairs": 9102,
+  "distinct_current_locations": 2496,
+  "current_tiles": 14,
+  "phase": {
+    "L2x3": {
+      "profile": "L2x3",
+      "baseline_occurrences": {
+        "mean": 52.7,
+        "p05": 47.45,
+        "p95": 57.0,
+        "min": 45.0,
+        "max": 57.0
+      },
+      "population": 64,
+      "cohorts": 30,
+      "designs": [
+        [
+          "topk4",
+          4,
+          2
+        ],
+        [
+          "topk16",
+          16,
+          8
+        ]
+      ],
+      "adoption": {
+        "0.5": {
+          "topk4": {
+            "synchronized_saved": {
+              "mean": 5.466666666666667,
+              "p05": 1.225,
+              "p95": 11.5,
+              "min": 1.0,
+              "max": 12.5
+            },
+            "independent_expected_saved": {
+              "mean": 5.227083333333334,
+              "p05": 1.0,
+              "p95": 11.3875,
+              "min": 1.0,
+              "max": 12.0
+            }
+          },
+          "topk16": {
+            "synchronized_saved": {
+              "mean": 5.470833333333333,
+              "p05": 0.5062500000000002,
+              "p95": 12.024999999999999,
+              "min": -0.625,
+              "max": 12.625
+            },
+            "independent_expected_saved": {
+              "mean": 0.49705066215190236,
+              "p05": -3.671393797893688,
+              "p95": 5.22218352581476,
+              "min": -5.8440673458844685,
+              "max": 5.709942383226007
+            }
+          }
+        },
+        "1.0": {
+          "topk4": {
+            "synchronized_saved": {
+              "mean": 30.9,
+              "p05": 26.45,
+              "p95": 35.275,
+              "min": 23.5,
+              "max": 36.0
+            },
+            "independent_expected_saved": {
+              "mean": 17.57322547309256,
+              "p05": 12.617276775836945,
+              "p95": 22.814507532119748,
+              "min": 10.405170440673828,
+              "max": 23.4337175488472
+            }
+          },
+          "topk16": {
+            "synchronized_saved": {
+              "mean": 44.75,
+              "p05": 39.575,
+              "p95": 49.0,
+              "min": 37.0,
+              "max": 49.125
+            },
+            "independent_expected_saved": {
+              "mean": 5.251303290997244,
+              "p05": -0.7296998049844424,
+              "p95": 9.850822080906655,
+              "min": -4.437413297156553,
+              "max": 10.02384297183331
+            }
+          }
+        }
+      },
+      "full_adoption_reversal": {
+        "count": 30,
+        "total": 30,
+        "synchronized_top16_advantage": {
+          "mean": 13.85,
+          "p05": 11.26875,
+          "p95": 16.549999999999997,
+          "min": 10.5,
+          "max": 17.5
+        },
+        "independent_top4_advantage": {
+          "mean": 12.321922182095314,
+          "p05": 9.840826540316614,
+          "p95": 14.777202213550943,
+          "min": 9.315290101129214,
+          "max": 15.613353137196597
+        }
+      }
+    },
+    "T16": {
+      "profile": "T16",
+      "baseline_occurrences": {
+        "mean": 63.733333333333334,
+        "p05": 62.0,
+        "p95": 64.0,
+        "min": 62.0,
+        "max": 64.0
+      },
+      "population": 64,
+      "cohorts": 30,
+      "designs": [
+        [
+          "topk4",
+          4,
+          2
+        ],
+        [
+          "topk16",
+          16,
+          8
+        ]
+      ],
+      "adoption": {
+        "0.5": {
+          "topk4": {
+            "synchronized_saved": {
+              "mean": 1.4833333333333334,
+              "p05": 0.0,
+              "p95": 4.6499999999999915,
+              "min": 0.0,
+              "max": 9.5
+            },
+            "independent_expected_saved": {
+              "mean": 1.4541666666666666,
+              "p05": 0.0,
+              "p95": 4.6499999999999915,
+              "min": 0.0,
+              "max": 9.5
+            }
+          },
+          "topk16": {
+            "synchronized_saved": {
+              "mean": 1.6208333333333333,
+              "p05": 0.0,
+              "p95": 5.906249999999988,
+              "min": 0.0,
+              "max": 9.75
+            },
+            "independent_expected_saved": {
+              "mean": 1.411767578125,
+              "p05": 0.0,
+              "p95": 5.27708740234374,
+              "min": 0.0,
+              "max": 8.68359375
+            }
+          }
+        },
+        "1.0": {
+          "topk4": {
+            "synchronized_saved": {
+              "mean": 41.93333333333333,
+              "p05": 39.45,
+              "p95": 44.275,
+              "min": 38.5,
+              "max": 45.5
+            },
+            "independent_expected_saved": {
+              "mean": 28.60655880642589,
+              "p05": 25.262841671705246,
+              "p95": 32.41362747270614,
+              "min": 23.1026611328125,
+              "max": 33.100563287734985
+            }
+          },
+          "topk16": {
+            "synchronized_saved": {
+              "mean": 55.78333333333333,
+              "p05": 54.2375,
+              "p95": 56.125,
+              "min": 54.0,
+              "max": 56.25
+            },
+            "independent_expected_saved": {
+              "mean": 16.284636624330577,
+              "p05": 12.81245923353922,
+              "p95": 19.794283447868718,
+              "min": 11.976830478097625,
+              "max": 20.132412872929663
+            }
+          }
+        }
+      },
+      "full_adoption_reversal": {
+        "count": 30,
+        "total": 30,
+        "synchronized_top16_advantage": {
+          "mean": 13.85,
+          "p05": 11.26875,
+          "p95": 16.549999999999997,
+          "min": 10.5,
+          "max": 17.5
+        },
+        "independent_top4_advantage": {
+          "mean": 12.321922182095314,
+          "p05": 9.840826540316614,
+          "p95": 14.777202213550943,
+          "min": 9.315290101129214,
+          "max": 15.613353137196597
+        }
+      }
+    }
+  },
+  "scope": "Same fixed pipeline on second static scene; oracle only. Quality failures remain failures. Phase results conditional on saved channel endpoint demands."
+}

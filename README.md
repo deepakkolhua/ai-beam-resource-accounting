@@ -1,42 +1,34 @@
 # When Does AI Beam Prediction Save Radio Resources?
+**Cell-Level Accounting for AI-Native 6G — Version 7 research companion**
 
-Companion code, manuscript, vector figures and verification records for the paper by Deepak Singh, Kyungpook National University.
+This public repository contains the version 7 manuscript and scientific materials for Deepak Singh's research on cell-level AI-beam resource accounting. Results are computational research scenarios, **not** claims of deployment-tested energy savings or a formally published journal article.
 
-## Paper and figures
+## Manuscript
+- [Final version 7 PDF](ComMag_Beam_Accounting.pdf)
+- [Final version 7 LaTeX source](ComMag_Beam_Accounting.tex)
+- [Vector figures](figures/) and [IEEEtran.cls](IEEEtran.cls)
 
-- [Manuscript PDF](manuscript/beam_magazine.pdf)
-- [LaTeX source](manuscript/beam_magazine.tex)
-- [Editable architecture figure](manuscript/figures/accounting_architecture_vector.tex)
-- [Reproduction instructions](AUTHOR_REPRODUCTION.md)
-- [Computational reproduction report](submission_reproduction/REPRODUCTION_REPORT.md)
+The final standalone PDF is used here rather than the older PDF copy present inside the revision archive. The version 7 TeX source and supporting figures are included separately.
 
-## Results and scope
+## Reproduction materials
+- [Scientific plotting source, vector figures and provenance](figures/)
+- [Audit-phase sensitivity scripts, prepared accounting inputs and saved results](sensitivity/)
+- [Second-scene preparation, independent checks, run protocols and outputs](second_scenario/)
+- [Validation summary](Validation_Summary.json)
 
-The validation-selected conventional profile is prior-top-16 (T16). Evaluation success within 3 dB is 98.7512%. With 64 users and 50% AI adoption, UE measurements fall from 1,024 to 576, while top-4 audits at duty 0.5 save 1.0833 CSI-RS occurrences per refinement epoch. At full adoption, top-4 and top-16 audits at equal average UE measurement budget save 39.2667 and 55.3792 occurrences, respectively.
+Four NPZ files are stored as numbered binary parts to avoid connector transfer limits; they can be losslessly reconstructed and SHA-256 verified. Run once from the repository root:
 
-These are conditional resource-accounting results with ideal prediction, not measured deployed AI gains. Equal measurement budget does not imply equal monitoring reliability. See the manuscript for assumptions and limits.
-
-## Reproduce the study
-
-Use the complete `Beam_Prediction_LaTeX_and_Code.zip` attached to release `v1.0.0` once it has been uploaded, then follow `AUTHOR_REPRODUCTION.md` inside its `beam_magazine/` folder. The complete ZIP includes archived studies and large numerical outputs omitted from this browsable source tree. If the release is absent, deposition is still incomplete.
-
-The repository also includes the three prior cohort/geometry NPZ inputs required by the current pipeline in `quality_revision/`. Raw and prepared third-party channel data are excluded from both distributions. Retrieve and prepare them using `data_pilot/README.md`; the required input SHA-256 is recorded in `AUTHOR_REPRODUCTION.md`. Do not resample the frozen historical cohorts.
-
-The analysis uses Python 3.12, NumPy 2.3.5, SciPy 1.17.0 and Matplotlib 3.10.8. Data preparation has separate requirements. To compile the article, run pdfLaTeX twice on `beam_magazine.tex` from `manuscript/`.
-
-## Complete package integrity
-
-File: `Beam_Prediction_LaTeX_and_Code.zip`
-
-SHA-256:
-```
-85752662835601ee9c37e0eb82e89807a439c5331356c3feda0c201dbbeb135b
+```bash
+python3 reconstruct_datasets.py
 ```
 
-`SOURCE_PACKAGE_MANIFEST.json` describes that complete ZIP; it is not a manifest of this smaller Git tree. `GITHUB_SOURCE_MANIFEST.json` records the files in this upload tree. `SNAPSHOT_README.md`, `DEPOSIT_README.md` and other dated records preserve the state when the verified snapshot was prepared. Their statements that deposition was pending are historical records, not evidence that a later upload failed.
+The script uses only the Python standard library. It rebuilds the original files and verifies their byte sizes and hashes using [RECONSTRUCTION_MANIFEST.json](RECONSTRUCTION_MANIFEST.json). Then follow [the second-scenario instructions](second_scenario/README.md) and the relevant scripts. To compile the manuscript, use a TeX installation with `pdflatex` and compile `ComMag_Beam_Accounting.tex` twice from the repository root.
 
-## Provenance and citation
+## Publication scope and research limits
+Research files only: manuscript, figures, code, protocols, prepared inputs, reproducibility metadata and scientific results. Submission correspondence, cover letter, peer-review replies and revision diffs are deliberately excluded from this deposit.
 
-ChatGPT assisted with drafting, code, figures and executing the recorded computational checks. Those checks do not establish personal reproduction by the human author. The manuscript acknowledgment preserves the assistance disclosure.
+The study uses model-based accounting and conditional oracle-style analysis; realizable signaling, robustness, energy metrology, controller support and practical model computation warrant further validation. Refer to the manuscript's limitations and the protocol records before generalizing the findings.
 
-After publishing, add the actual repository/release URL to `CITATION.cff` and the manuscript. No DOI or completed publication is claimed here. Dataset and third-party software rights remain separate; no blanket license has been assigned.
+Some older root-level documents describe earlier repository snapshots and upload plans, and may reference historical paths or archives. **Use this version 7 manifest and the links above for the present scientific deposit.** No DOI, publisher acceptance, or journal publication is asserted here.
+
+Data and third-party components retain their respective rights; no blanket redistributive license is implied. Computational-assistance disclosures appear in the manuscript acknowledgment.

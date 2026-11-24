@@ -25,6 +25,6 @@ Research files only: manuscript, figures, code, protocols, prepared inputs, repr
 
 The study uses model-based accounting and conditional oracle-style analysis; realizable signaling, robustness, energy metrology, controller support and practical model computation warrant further validation. Refer to the manuscript's limitations and the protocol records before generalizing the findings.
 
-Some older root-level documents describe earlier repository snapshots and upload plans, and may reference historical paths or archives. **Use this version 7 manifest and the links above for the present scientific deposit.** No DOI, publisher acceptance, or journal publication is asserted here.
+
 
 Data and third-party components retain their respective rights; no blanket redistributive license is implied. Computational-assistance disclosures appear in the manuscript acknowledgment.

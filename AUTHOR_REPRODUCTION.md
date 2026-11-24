@@ -36,12 +36,9 @@ Expected primary outputs: T16 selected; evaluation success 0.9875118131497234;64
 
 The public-repository destination, final author approval and submission are not supplied or performed by these scripts.
 
-## Final acknowledgment after your completed run
 
-The current manuscript already discloses the AI system, its contributions and affected sections. After you personally complete the run, verify the outputs and approve the manuscript, you may add this factual sentence:
 
 > The author independently reproduced all reported results from the companion package and takes responsibility for them.
 
-Do not replace the existing disclosure with a narrower claim that ChatGPT was used only for grammar or coding; it also contributed manuscript text, plotting and computation. No sentence asserting your personal completion has been inserted automatically.
 
-The current acknowledgment accurately reports the computational assistance and checks. It does not assert human-author reproduction or an existing public deposit. After those steps are complete, add only the corresponding truthful statement and real public DOI or repository URL. The fresh computational rerun is documented in `submission_reproduction/`; it regenerates outputs from the hash-verified prepared input and does not re-download or re-simulate the underlying ray-traced scene.
+

@@ -3,6 +3,7 @@
 
 This public repository contains the version 7 manuscript and scientific materials for Deepak Singh's research on cell-level AI-beam resource accounting. Results are computational research scenarios, **not** claims of deployment-tested energy savings or a formally published journal article.
 
+
 The final standalone PDF is used here rather than the older PDF copy present inside the revision archive. The version 7 TeX source and supporting figures are included separately.
 
 ## Reproduction materials
@@ -23,6 +24,7 @@ The script uses only the Python standard library. It rebuilds the original files
 Research files only: manuscript, figures, code, protocols, prepared inputs, reproducibility metadata and scientific results. Submission correspondence, cover letter, peer-review replies and revision diffs are deliberately excluded from this deposit.
 
 The study uses model-based accounting and conditional oracle-style analysis; realizable signaling, robustness, energy metrology, controller support and practical model computation warrant further validation. Refer to the manuscript's limitations and the protocol records before generalizing the findings.
+
 
 
 Data and third-party components retain their respective rights; no blanket redistributive license is implied. Computational-assistance disclosures appear in the manuscript acknowledgment.

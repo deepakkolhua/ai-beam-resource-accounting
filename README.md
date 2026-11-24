@@ -3,10 +3,6 @@
 
 This public repository contains the version 7 manuscript and scientific materials for Deepak Singh's research on cell-level AI-beam resource accounting. Results are computational research scenarios, **not** claims of deployment-tested energy savings or a formally published journal article.
 
-## Manuscript
-- [Final version 7 PDF](ComMag_Beam_Accounting.pdf)
-- [Final version 7 LaTeX source](ComMag_Beam_Accounting.tex)
-- [Vector figures](figures/) and [IEEEtran.cls](IEEEtran.cls)
 
 The final standalone PDF is used here rather than the older PDF copy present inside the revision archive. The version 7 TeX source and supporting figures are included separately.
 
